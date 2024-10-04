@@ -4,13 +4,7 @@ const rssFeedUrls = [
     'http://rss.cnn.com/rss/edition.rss',
     'http://feeds.reuters.com/reuters/topNews',
     'https://rss.nytimes.com/services/xml/rss/nyt/World.xml', 
-    'https://www.aljazeera.com/xml/rss/all.xml',
-    'https://www.theguardian.com/world/rss',
-    'https://feeds.foxnews.com/foxnews/world',
-    'https://www.nbcnews.com/id/3032091/device/rss/rss.xml',
-    'https://abcnews.go.com/abcnews/topstories',
-    'https://feeds.skynews.com/feeds/rss/home.xml',
-    'http://rssfeeds.usatoday.com/usatoday-NewsTopStories'
+    'https://www.aljazeera.com/xml/rss/all.xml'
 ];
 
 // সকল RSS ফিড থেকে খবর ফেচ করার জন্য ফাংশন
