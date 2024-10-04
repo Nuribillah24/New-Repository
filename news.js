@@ -9,15 +9,7 @@ const rssFeeds = [
   "https://feeds.foxnews.com/foxnews/world", 
   "https://www.nbcnews.com/id/3032091/device/rss/rss.xml",
   "https://abcnews.go.com/abcnews/topstories", 
-  "https://www.cbsnews.com/latest/rss/world",
   "https://feeds.skynews.com/feeds/rss/home.xml",
-  "https://www.yahoo.com/news/rss",
-  "https://feeds2.feedburner.com/time/world",
-  "http://feeds.washingtonpost.com/rss/world",
-  "https://feeds.npr.org/1001/rss.xml",
-  "https://www.ft.com/world?format=rss",
-  "https://www.economist.com/sections/international/rss.xml",
-  "https://www.huffpost.com/section/world-news/feed",
   "http://rssfeeds.usatoday.com/usatoday-NewsTopStories"
 ];
   // ফিড থেকে RSS ডেটা আনতে একটি async ফাংশন তৈরি করা
