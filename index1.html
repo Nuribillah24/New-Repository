@@ -13,7 +13,19 @@
 
     <script>
         // RSS ফিড URL (যেমন BBC বা CNN)
-        const rssFeedUrl = 'https://feeds.bbci.co.uk/news/world/rss.xml';
+        const rssFeedUrl = ['https://feeds.bbci.co.uk/news/world/rss.xml',
+          "http://rss.cnn.com/rss/edition.rss",
+          "http://feeds.reuters.com/reuters/topNews",
+          "http://feeds.bbci.co.uk/news/world/rss.xml",
+          "https://rss.nytimes.com/services/xml/rss/nyt/World.xml", 
+          "https://www.aljazeera.com/xml/rss/all.xml", 
+         "https://www.theguardian.com/world/rss",
+         "https://feeds.foxnews.com/foxnews/world", 
+         "https://www.nbcnews.com/id/3032091/device/rss/rss.xml",
+        "https://abcnews.go.com/abcnews/topstories", 
+        "https://feeds.skynews.com/feeds/rss/home.xml",
+         "http://rssfeeds.usatoday.com/usatoday-NewsTopStories"] ;
+        
 
         // RSS to JSON API ব্যবহার করে ফিড ফেচ করা
         const rssToJsonApi = `https://api.rss2json.com/v1/api.json?rss_url=${rssFeedUrl}`;
