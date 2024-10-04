@@ -1,10 +1,18 @@
 // RSS ফিডগুলির লিস্ট
 const rssFeeds = [
   "http://rss.cnn.com/rss/edition.rss",
-  "http://feeds.reuters.com/reuters/topNews"
-];
+  "http://feeds.reuters.com/reuters/topNews", "http://feeds.bbci.co.uk/news/world/rss.xml",
+  "https://rss.nytimes.com/services/xml/rss/nyt/World.xml", 
+  "https://www.aljazeera.com/xml/rss/all.xml", "https://www.theguardian.com/world/rss",
+  "https://feeds.foxnews.com/foxnews/world", "https://www.nbcnews.com/id/3032091/device/rss/rss.xml",
+  "https://abcnews.go.com/abcnews/topstories", "https://www.cbsnews.com/latest/rss/world",
+  "https://feeds.skynews.com/feeds/rss/home.xml", "https://www.yahoo.com/news/rss", "https://feeds2.feedburner.com/time/world",
+  "http://feeds.washingtonpost.com/rss/world", "https://feeds.npr.org/1001/rss.xml", "https://www.ft.com/world?format=rss",
+  "https://www.economist.com/sections/international/rss.xml",
+  "https://www.huffpost.com/section/world-news/feed", "  http://rssfeeds.usatoday.com/usatoday-NewsTopStories" ];
 
-// ফিড থেকে RSS ডেটা আনতে একটি async ফাংশন তৈরি করা
+  
+  // ফিড থেকে RSS ডেটা আনতে একটি async ফাংশন তৈরি করা
 async function fetchRSSFeed(url) {
   try {
     const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${url}`);
