@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest News</title>
+</head>
+<body>
+    <h1>Latest News</h1>
+    <div id="news-container">
+        <!-- RSS ফিড থেকে খবর এখানে দেখানো হবে -->
+    </div>
+
+    <script>
+        // RSS ফিড URL (যেমন BBC বা CNN)
+        const rssFeedUrl = 'https://feeds.bbci.co.uk/news/world/rss.xml';
+
+        // RSS to JSON API ব্যবহার করে ফিড ফেচ করা
+        const rssToJsonApi = `https://api.rss2json.com/v1/api.json?rss_url=${rssFeedUrl}`;
+
+        // Fetch RSS ফিড
+        fetch(rssToJsonApi)
+            .then(response => response.json())
+            .then(data => {
+                const newsContainer = document.getElementById('news-container');
+                const newsItems = data.items;
+
+                // ফিড থেকে খবর দেখানো
+                newsItems.forEach(item => {
+                    const newsElement = document.createElement('div');
+                    newsElement.innerHTML = `
+                        <h2>${item.title}</h2>
+                        <p>${item.description}</p>
+                        <a href="${item.link}" target="_blank">Read more</a>
+                    `;
+                    newsContainer.appendChild(newsElement);
+                });
+            })
+            .catch(error => console.error('Error fetching the RSS feed:', error));
+    </script>
+</body>
+</html>
