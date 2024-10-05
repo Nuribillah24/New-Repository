@@ -8,7 +8,7 @@
 <body>
     <h1>Latest News</h1>
     <div id="news-container">
-        <!-- RSS -->
+        
     </div>
 
     <script>
@@ -16,10 +16,6 @@
             'https://feeds.bbci.co.uk/news/world/rss.xml',
             'http://rss.cnn.com/rss/edition.rss'
         ];
-
-        const fetchNews = (rssFeedUrl) => {
-            const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; // CORS Proxy URL
-            const rssToJsonApi = `https://api.rss2json.com/v1/api.json?rss_url=${proxyUrl}${rssFeedUrl}`;
 
             fetch(rssToJsonApi)
                 .then(response => response.json())
